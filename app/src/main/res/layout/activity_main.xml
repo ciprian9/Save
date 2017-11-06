@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/background"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/app_main_label"
+        android:textAllCaps="true"
+        android:textColor="#6ba3ff"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="50sp"
+        android:paddingTop="10dp"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/in_between_layout_space"
+        android:id="@+id/linearLayout">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/AddGoal"
+            android:id="@+id/btnAddStudent"
+            android:textSize="28sp"
+            android:layout_margin="20dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="60dp"
+            android:paddingRight="60dp"
+            android:textAllCaps="false"
+            android:fontFamily="sans-serif"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_label_Show_Details"
+            android:id="@+id/btnShowDetails"
+            android:textSize="28sp"
+            android:layout_margin="20dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="60dp"
+            android:paddingRight="60dp"
+            android:textAllCaps="false"
+            android:fontFamily="sans-serif"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/update_goal"
+            android:id="@+id/btnUpdateInfo"
+            android:textSize="28sp"
+            android:layout_margin="20dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="60dp"
+            android:paddingRight="60dp"
+            android:textAllCaps="false"
+            android:fontFamily="sans-serif" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/delete_goal"
+            android:id="@+id/btnDeleteInfo"
+            android:textSize="28sp"
+            android:layout_margin="20dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="60dp"
+            android:paddingRight="60dp"
+            android:textAllCaps="false"
+            android:fontFamily="sans-serif" />
+    </LinearLayout>
+
+</RelativeLayout>
