@@ -18,8 +18,8 @@
         android:id="@+id/textView"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textSize="50sp"
-        android:paddingTop="10dp"/>
+        android:textSize="@dimen/TextSize_Title"
+        android:paddingTop="@dimen/Pdding_Title"/>
 
     <LinearLayout
         android:orientation="vertical"
@@ -35,12 +35,12 @@
             android:layout_height="wrap_content"
             android:text="@string/AddGoal"
             android:id="@+id/btnAddStudent"
-            android:textSize="28sp"
-            android:layout_margin="20dp"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-            android:paddingLeft="60dp"
-            android:paddingRight="60dp"
+            android:textSize="@dimen/TextSize_Buttons"
+            android:layout_margin="@dimen/MarginButtons"
+            android:paddingTop="@dimen/PaddingUpDown"
+            android:paddingBottom="@dimen/PaddingUpDown"
+            android:paddingLeft="@dimen/PaddingLeftRight"
+            android:paddingRight="@dimen/PaddingLeftRight"
             android:textAllCaps="false"
             android:fontFamily="sans-serif"/>
 
@@ -49,12 +49,12 @@
             android:layout_height="wrap_content"
             android:text="@string/btn_label_Show_Details"
             android:id="@+id/btnShowDetails"
-            android:textSize="28sp"
-            android:layout_margin="20dp"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-            android:paddingLeft="60dp"
-            android:paddingRight="60dp"
+            android:textSize="@dimen/TextSize_Buttons"
+            android:layout_margin="@dimen/MarginButtons"
+            android:paddingTop="@dimen/PaddingUpDown"
+            android:paddingBottom="@dimen/PaddingUpDown"
+            android:paddingLeft="@dimen/PaddingLeftRight"
+            android:paddingRight="@dimen/PaddingLeftRight"
             android:textAllCaps="false"
             android:fontFamily="sans-serif"/>
 
@@ -63,12 +63,12 @@
             android:layout_height="wrap_content"
             android:text="@string/update_goal"
             android:id="@+id/btnUpdateInfo"
-            android:textSize="28sp"
-            android:layout_margin="20dp"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-            android:paddingLeft="60dp"
-            android:paddingRight="60dp"
+            android:textSize="@dimen/TextSize_Buttons"
+            android:layout_margin="@dimen/MarginButtons"
+            android:paddingTop="@dimen/PaddingUpDown"
+            android:paddingBottom="@dimen/PaddingUpDown"
+            android:paddingLeft="@dimen/PaddingLeftRight"
+            android:paddingRight="@dimen/PaddingLeftRight"
             android:textAllCaps="false"
             android:fontFamily="sans-serif" />
 
@@ -77,12 +77,12 @@
             android:layout_height="wrap_content"
             android:text="@string/delete_goal"
             android:id="@+id/btnDeleteInfo"
-            android:textSize="28sp"
-            android:layout_margin="20dp"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-            android:paddingLeft="60dp"
-            android:paddingRight="60dp"
+            android:textSize="@dimen/TextSize_Buttons"
+            android:layout_margin="@dimen/MarginButtons"
+            android:paddingTop="@dimen/PaddingUpDown"
+            android:paddingBottom="@dimen/PaddingUpDown"
+            android:paddingLeft="@dimen/PaddingLeftRight"
+            android:paddingRight="@dimen/PaddingLeftRight"
             android:textAllCaps="false"
             android:fontFamily="sans-serif" />
     </LinearLayout>

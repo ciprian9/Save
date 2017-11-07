@@ -5,17 +5,17 @@
     android:background="#e8e8e8">
 
     <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="@dimen/WidthHeightLogo"
+        android:layout_height="@dimen/WidthHeightLogo"
         android:id="@+id/splashScreenImage"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:clickable="false"
-        android:minWidth="200dp"
-        android:minHeight="200dp"
-        android:maxWidth="201dp"
-        android:maxHeight="201dp"
-        android:paddingBottom="10dp"
+        android:minWidth="@dimen/MinWidthHeigth"
+        android:minHeight="@dimen/MinWidthHeigth"
+        android:maxWidth="@dimen/MaxWidthHeight"
+        android:maxHeight="@dimen/MaxWidthHeight"
+        android:paddingBottom="@dimen/PaddingButtom_Logo"
         android:src="@mipmap/logo"/>
 
     <TextView
