@@ -16,24 +16,22 @@ public class AddGoalDialog extends DialogFragment {
 
     ////interface to handle the Events
     interface AddGoalDialogListener{
-
+        //The Event Handler for the Save Goal
         void onSaveButtonClick(DialogFragment dialog);
-        //void onCancelButtonClick(DialogFragment dialog);
 
     }
 
     //create an Instance to deliever the action
     AddGoalDialogListener addGoalListener;
-    Context context;
 
-    // Override the Fragment.onAttach() method to instantiate the SetPasswordDialogListener
+    // Override the Fragment.onAttach() method to instantiate the SetAddGoalListener
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
 
         // Verify that the host activity implements the callback interface
         try {
-            // Instantiate the SetPasswordDialogListener so we can send events to the host
+            // Instantiate the SetAddGoalDialogListener so we can send events to the host
             addGoalListener = (AddGoalDialogListener) activity;
         } catch (ClassCastException e) {
             // The activity doesn't implement the interface, throw exception
@@ -46,7 +44,7 @@ public class AddGoalDialog extends DialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
 
-
+        //create the default alertDialogue
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
         // Get the layout inflater
