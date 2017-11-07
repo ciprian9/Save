@@ -21,10 +21,10 @@ public class DBHandler extends SQLiteOpenHelper {
     // Database Name
     private static final String DATABASE_NAME = "goal";
 
-    // Contacts table name
+    // Goal table name
     private static final String TABLE_DETAIL = "GoalDetails";
 
-    // Contacts Table Columns names
+    // Goal Table Columns names
     private static final String KEY_ID = "id";
     private static final String KEY_GOAL_NAME = "goal_name";
     private static final String KEY_DESCRIPTION = "description";
@@ -65,7 +65,7 @@ public class DBHandler extends SQLiteOpenHelper {
      * All CRUD(Create, Read, Update, Delete) Operations
      */
 
-    // Adding new Student Information
+    // Adding new Goal Information
     void addNewGoal(Goal newGoal) {
 
         SQLiteDatabase db = this.getWritableDatabase();
@@ -83,17 +83,17 @@ public class DBHandler extends SQLiteOpenHelper {
         db.close(); // Closing database connection
     }
 
-
+    //Update table contents based on Id
     public boolean updateGoalInfo(int idNo, int updSum) {
 
         SQLiteDatabase db = this.getWritableDatabase();
-
+        //SQL command to update table contents
         db.execSQL("Update " + TABLE_DETAIL + " set " +  KEY_SUM + " = " + KEY_SUM +" - " + updSum + " where id = " + idNo );
 
         return true;
     }
 
-
+    //Delete goal block
     public boolean deleteGoal(int delID){
 
         SQLiteDatabase db = this.getWritableDatabase();
@@ -105,7 +105,7 @@ public class DBHandler extends SQLiteOpenHelper {
 
 
 
-    // Getting All Students
+    // Getting All Goals
     public List<Goal> getAllGoalsList() {
 
 

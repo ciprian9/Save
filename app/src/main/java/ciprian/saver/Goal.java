@@ -1,19 +1,19 @@
 package ciprian.saver;
 
 /**
- * Created by 3537 on 06-11-2015.
- * Purvik Rana - Student Main Class
- * Attributes: id, enroll_no, name, phone_number;
+ * Created by Ciprian on 07-11-2017.
+ * Ciprian - Goal Main Class
+ * Attributes: id, GoalName, Description, Sum;
  * Constructor: empty, all parameter, three parameter
  * Getter & Setters: all attributes
  */
 public class Goal {
 
     //Private Variable
-    int _id;
-    String _goal_name;
-    String _description;
-    int _sum;
+    private int _id;
+    private String _goal_name;
+    private String _description;
+    private int _sum;
 
     //empty constructor
     public Goal() {

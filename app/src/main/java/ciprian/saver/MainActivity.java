@@ -1,5 +1,9 @@
 package ciprian.saver;
 
+/**
+ * Created by Ciprian Anton on 06-10-2017.
+ */
+
 import android.app.DialogFragment;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
@@ -19,9 +23,7 @@ public class MainActivity extends AppCompatActivity implements AddGoalDialog.Add
                                 UpdateGoalInfo.UpdateGoalDialogListener, DeleteGoalDialog.DeleteGoalDialogListener {
 
     Button btnAddGoal, btnUpdateInfo, btnShowDetails, btnDeleteInfo;
-    TextView textView;
     private String TAG = "Saver";
-    SQLiteDatabase dtb;
     int btnBackPressCounter = 0;
     DBHandler db;
     boolean check_goal_name;
@@ -42,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements AddGoalDialog.Add
         btnShowDetails = (Button)findViewById(R.id.btnShowDetails);
         btnUpdateInfo = (Button)findViewById(R.id.btnUpdateInfo);
         btnDeleteInfo = (Button)findViewById(R.id.btnDeleteInfo);
-
+        //Set all click Listeners
         btnAddGoal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -88,38 +90,26 @@ public class MainActivity extends AppCompatActivity implements AddGoalDialog.Add
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
+    //Save Goal To Databse
     @Override
     public void onSaveButtonClick(DialogFragment dialog) {
 
 
-            //		Get enrollNumber
-            EditText entGoalName = (EditText) dialog.getDialog().findViewById(R.id.add_GoalName);
+            //		Get GoalName
+            EditText entGoalName = dialog.getDialog().findViewById(R.id.add_GoalName);
             String goal_name = entGoalName.getText().toString();
 
 
-            //		Get Name
-            EditText entDesc = (EditText) dialog.getDialog().findViewById(R.id.add_Description);
+            //		Get Description
+            EditText entDesc =  dialog.getDialog().findViewById(R.id.add_Description);
             String description = entDesc.getText().toString();
 
-            //		Get Phone Number
-            EditText entSum = (EditText) dialog.getDialog().findViewById(R.id.add_sumEdt);
+            //		Get Sum
+            EditText entSum = dialog.getDialog().findViewById(R.id.add_sumEdt);
             String sum = entSum.getText().toString();
             int int_Sum = 0;
+
+        //Verify if all the fields were filled
 
         try {
             int_Sum = Integer.parseInt(entSum.getText().toString());
@@ -132,8 +122,6 @@ public class MainActivity extends AppCompatActivity implements AddGoalDialog.Add
 
             check_sum = checkSum(sum);
 
-            //System.out.println("This is " + goal_name);
-
         }
         catch(Exception ex){
             check_goal_name = false;
@@ -141,6 +129,7 @@ public class MainActivity extends AppCompatActivity implements AddGoalDialog.Add
             check_desc = false;
         }
 
+        //Toast the results
         if(check_goal_name == false || check_desc == false || check_sum == false){
 
             Toast.makeText(getApplicationContext(),"Enter Data Again.. :P", Toast.LENGTH_LONG).show();
@@ -152,7 +141,7 @@ public class MainActivity extends AppCompatActivity implements AddGoalDialog.Add
         }
 
 
-
+        //Display the data entered
         Toast.makeText(getApplicationContext(),"\nName :" + goal_name + "\nDesc: " + description + "\nSum:" + sum , Toast.LENGTH_LONG).show();
 
 
@@ -171,7 +160,7 @@ public class MainActivity extends AppCompatActivity implements AddGoalDialog.Add
 
     }
 
-    //Check Enrollment number
+    //Check Goal Name
     public boolean checkGoalName(String goal_name){
 
         if(goal_name.isEmpty()){
@@ -184,7 +173,7 @@ public class MainActivity extends AppCompatActivity implements AddGoalDialog.Add
 
     }
 
-    //Check Name
+    //Check Description
     public boolean checkDescription(String desc){
 
         if(desc.isEmpty()){
@@ -194,7 +183,7 @@ public class MainActivity extends AppCompatActivity implements AddGoalDialog.Add
         }
     }
 
-    //Check Phone Number
+    //Check Sum
     public boolean checkSum(String sum){
 
         if((sum.isEmpty())){
@@ -211,12 +200,12 @@ public class MainActivity extends AppCompatActivity implements AddGoalDialog.Add
 
 
 //		Get ID
-        EditText entId = (EditText) dialog.getDialog().findViewById(R.id.edt_UpdateId);
+        EditText entId = dialog.getDialog().findViewById(R.id.edt_UpdateId);
         String idNo = entId.getText().toString();
         int int_idNo = 0;
 
-        //		Get Phone Number
-        EditText entSum = (EditText) dialog.getDialog().findViewById(R.id.edt_UpdateSum);
+        //		Get Sum
+        EditText entSum = dialog.getDialog().findViewById(R.id.edt_UpdateSum);
         String sum = entSum.getText().toString();
         int int_Sum = 0;
 
@@ -240,6 +229,7 @@ public class MainActivity extends AppCompatActivity implements AddGoalDialog.Add
 
         List<Goal> goalsList = db.getAllGoalsList();
 
+        //Verify if the Id exists in the database
         for(Goal g : goalsList){
             if(g.get_id() == int_idNo){
                 check_idNo = true;
@@ -272,7 +262,7 @@ public class MainActivity extends AppCompatActivity implements AddGoalDialog.Add
     public void onDeleteButtonClick(DialogFragment dialog) {
 
         //		Get ID
-        EditText entId = (EditText) dialog.getDialog().findViewById(R.id.edt_deleteID);
+        EditText entId = dialog.getDialog().findViewById(R.id.edt_deleteID);
         String idNo = entId.getText().toString();
         boolean check_idNo;
         int int_idNo = 0;
@@ -314,9 +304,6 @@ public class MainActivity extends AppCompatActivity implements AddGoalDialog.Add
 
         }
         else {
-			/*super.onBackPressed();
-            if (interAd.isLoaded()) {
-                interAd.show();*/
             finish();
             }
 

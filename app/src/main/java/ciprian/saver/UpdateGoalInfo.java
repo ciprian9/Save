@@ -8,9 +8,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-
 /**
- * Created by 3537 on 07-11-2015.
+ * Created by Ciprian Anton on 06-10-2017.
  */
 public class UpdateGoalInfo extends DialogFragment {
 
@@ -18,21 +17,19 @@ public class UpdateGoalInfo extends DialogFragment {
     interface UpdateGoalDialogListener{
 
         void onUpdateButtonClick(DialogFragment dialog);
-        //void onCancelButtonClick(DialogFragment dialog);
-
     }
 
     //create an Instance to deliever the action
     UpdateGoalDialogListener updateGoalListener;
     Context context;
 
-    // Override the Fragment.onAttach() method to instantiate the SetPasswordDialogListener
+    // Override the Fragment.onAttach() method to instantiate the GoalDialogListener
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
         // Verify that the host activity implements the callback interface
         try {
-            // Instantiate the updateStudentListener so we can send events to the host
+            // Instantiate the updateGoalListener so we can send events to the host
             updateGoalListener = (UpdateGoalDialogListener) activity;
         } catch (ClassCastException e) {
             // The activity doesn't implement the interface, throw exception

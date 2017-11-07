@@ -9,6 +9,7 @@ import android.widget.TextView;
 import java.util.List;
 
 public class GoalDetails extends AppCompatActivity {
+    //Static Variable in order to figure out which item was selected from the list
     public static final String EXTRA_GOALNO = "GoalId";
 
     @Override
@@ -30,9 +31,7 @@ public class GoalDetails extends AppCompatActivity {
 
 
         List<Goal> goalsList = db.getAllGoalsList();    //	fetch List of BlockedNumbers form DB  method - 'getAllBlockedNumbers'
-        //System.out.println(goalsList.get(goalNo)._sum);
-        int new_sum = goalsList.get(goalNo)._sum;
-        //System.out.println("This is " + new_sum);
+        int new_sum = goalsList.get(goalNo).get_sum();
         if (new_sum > 0) {
             goalDetail = "\n\n\tID:" + goalsList.get(goalNo).get_id() + "\n\tGoal:" + goalsList.get(goalNo).get_goal_name() + "\n\tDesc:" + goalsList.get(goalNo).get_description() + "\n\tTo Save:" + goalsList.get(goalNo).get_sum();
         } else {

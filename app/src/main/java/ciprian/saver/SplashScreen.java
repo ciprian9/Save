@@ -21,7 +21,7 @@ public class SplashScreen extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash_screen);
-
+        //Set up the animation
         Animation anim = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fade_in);
         Animation anim1 = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fade_in_from_left);
 
