@@ -5,4 +5,15 @@
     <dimen name="in_between_layout_space">20dp</dimen>
     <dimen name="in_between_widget_space">5dp</dimen>
     <dimen name="AppNameSplashScreen">30dp</dimen>
+    <dimen name="Logo_Detail_MarginTop">5dp</dimen>
+    <dimen name="TextSize_Title">50sp</dimen>
+    <dimen name="Pdding_Title">10dp</dimen>
+    <dimen name="TextSize_Buttons">28sp</dimen>
+    <dimen name="MarginButtons">20dp</dimen>
+    <dimen name="PaddingUpDown">8dp</dimen>
+    <dimen name="PaddingLeftRight">60dp</dimen>
+    <dimen name="WidthHeightLogo">150dp</dimen>
+    <dimen name="MinWidthHeigth">200dp</dimen>
+    <dimen name="MaxWidthHeight">201dp</dimen>
+    <dimen name="PaddingButtom_Logo">10dp</dimen>
 </resources>

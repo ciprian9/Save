@@ -38,8 +38,8 @@ public class ShowSomething extends ListActivity {
         list.setAdapter(arrayAdapter);
     }
 
-    //Start the next activity using an intent and passing extra info in it
     @Override
+    //Start the next activity using an intent and passing extra info in it
     public void onListItemClick(ListView listView,
                                 View itemView,
                                 int position,

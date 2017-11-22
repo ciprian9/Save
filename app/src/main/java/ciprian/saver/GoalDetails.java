@@ -35,7 +35,7 @@ public class GoalDetails extends AppCompatActivity {
         if (new_sum > 0) {
             goalDetail = "\n\n\tID:" + goalsList.get(goalNo).get_id() + "\n\tGoal:" + goalsList.get(goalNo).get_goal_name() + "\n\tDesc:" + goalsList.get(goalNo).get_description() + "\n\tTo Save:" + goalsList.get(goalNo).get_sum();
         } else {
-            goalDetail = "\n\n\tTask With ID:" + goalsList.get(goalNo).get_id() + "\nName: " + goalsList.get(goalNo).get_goal_name() + "\n\t\tis completead Please remove it by clicking here";
+            goalDetail = "\n\n\tTask With ID:" + goalsList.get(goalNo).get_id() + "\nName: " + goalsList.get(goalNo).get_goal_name() + "\nis completead Please remove it";
         }
         screen.append("\n" + goalDetail);
     }

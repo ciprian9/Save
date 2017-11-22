@@ -4,7 +4,7 @@
     <string name="app_main_label">Saver</string>
     <string name="btn_label_Show_Details">Show Detail</string>
     <string name="add">ADD</string>
-    <string name="cancel">CANCEL</string>
+    <string name="cancel">Cancel</string>
     <string name="NoteDeleteStudent">Don\'t Left Field Empty</string>
     <string name="AddGoal">Add Goal</string>
     <string name="update_goal">Update Goal</string>
@@ -20,5 +20,6 @@
     <string name="btnLabel_delete">DELETE</string>
     <string name="tv_Update">UPDATE</string>
     <string name="sum_saved">Sum Saved</string>
+    <string name="logo_detailActivity">Logo</string>
 
 </resources>
